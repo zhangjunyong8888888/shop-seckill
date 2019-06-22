@@ -8,6 +8,7 @@ public class CodeMsg {
 	public static CodeMsg SUCCESS = new CodeMsg(0, "success");
 	public static CodeMsg SERVER_ERROR = new CodeMsg(500100, "服务端异常");
 	public static CodeMsg BIND_ERROR = new CodeMsg(500101, "参数校验异常：%s");
+	public static CodeMsg NO_LOGIN = new CodeMsg(500102, "请先登录");
 	//登录模块 5002XX
 	public static CodeMsg SESSION_ERROR = new CodeMsg(500210, "Session不存在或者已经失效");
 	public static CodeMsg PASSWORD_EMPTY = new CodeMsg(500211, "登录密码不能为空");
@@ -21,7 +22,12 @@ public class CodeMsg {
 	//订单模块 5004XX
 	
 	//秒杀模块 5005XX
-	
+	public static CodeMsg SECKILL_GOODS_NOT_FOUND = new CodeMsg(500500, "秒杀商品不存在");
+	public static CodeMsg SECKILL_NOT_STARTED = new CodeMsg(500501, "秒杀未开始");
+	public static CodeMsg SECKILL_FINISHED = new CodeMsg(500502, "秒杀已结束");
+	public static CodeMsg SECKILL_CAN_NOT_REPEAT = new CodeMsg(500503, "秒杀不允许重复");
+	public static CodeMsg SECKILL_REDUCE_INVENTORY_FILED = new CodeMsg(500504, "扣除商品库存失败");
+
 	
 	private CodeMsg(int code, String msg) {
 		this.code = code;

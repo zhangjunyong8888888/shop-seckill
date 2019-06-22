@@ -15,6 +15,6 @@ public interface UserDao {
     @Select("select * from user where mobile =#{mobile}")
     User getByMobile(@Param("mobile") String mobile);
 
-    @Insert("insert into user (id,name) values(#{id},#{name})")
+    @Insert("insertOrder into user (id,name) values(#{id},#{name})")
     Integer insert(User user);
 }
