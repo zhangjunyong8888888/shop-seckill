@@ -50,8 +50,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean login(HttpServletResponse response,
-                         LoginParam loginParam) {
+    public String login(HttpServletResponse response,
+                        LoginParam loginParam) {
         User user = userDao.getByMobile(loginParam.getMobile());
         if(user == null){
             throw new GlobalException(MOBILE_NOT_EXIST);
@@ -61,7 +61,7 @@ public class UserServiceImpl implements UserService {
         }
         String token = UUIDUtil.uuid();
         addUserCookie(response, user, token);
-        return true;
+        return token;
     }
 
     private void addUserCookie(HttpServletResponse response, User user, String token) {

@@ -35,7 +35,7 @@ public class SeckillController {
 
     /**
      * 秒杀
-     *
+     * 1000 并发 11.6 qps
      * @param user
      * @param model
      * @param goodsId

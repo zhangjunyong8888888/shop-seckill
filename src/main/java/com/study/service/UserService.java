@@ -32,7 +32,7 @@ public interface UserService {
     /**
      * 用户登录
      * @param loginParam
-     * @return
+     * @return token
      */
-    boolean login(HttpServletResponse response, LoginParam loginParam);
+    String login(HttpServletResponse response, LoginParam loginParam);
 }

@@ -18,6 +18,7 @@ public class User {
     private String password;
     private String salt;
     private String head;
+    private String mobile;
     private LocalDateTime registerTime;
     private LocalDateTime lastLoginTime;
     private Integer loginCount;
